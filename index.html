@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101915">
+  <meta name="description" content="Dodge the meteor shower and see how long you can last.">
+  <title>Meteor Drift</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="game.js" defer></script>
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <a class="wordmark" href="./" aria-label="Meteor Drift home"><span class="mark" aria-hidden="true">✳</span> FIELD NOTES <span class="edition">/ 07</span></a>
+      <span class="status"><span class="status-dot"></span> ARCADE ACTIVE</span>
+    </header>
+
+    <section class="game-layout" aria-labelledby="game-title">
+      <div class="intro">
+        <p class="eyebrow">A small game about keeping your cool</p>
+        <h1 id="game-title">Meteor<br><em>Drift</em></h1>
+        <p class="lede">The sky is getting crowded. Find the gaps, keep moving, and don't look up for too long.</p>
+        <div class="best-line"><span>PERSONAL BEST</span><strong id="best-score">0000</strong></div>
+        <p class="key-hint"><span class="keycap">←</span><span class="keycap">→</span> MOVE <span class="hint-divider">·</span> <span class="keycap">SPACE</span> LAUNCH</p>
+      </div>
+
+      <div class="play-area">
+        <div class="game-topline"><span>SECTOR 01</span><span id="game-status">READY WHEN YOU ARE</span></div>
+        <div class="canvas-wrap">
+          <canvas id="game" width="480" height="640" aria-label="Meteor Drift game area. Move left and right to dodge meteors."></canvas>
+          <div class="game-overlay" id="overlay">
+            <p class="overlay-kicker" id="overlay-kicker">FLIGHT LOG 001</p>
+            <h2 id="overlay-title">Clear skies<br>won't last.</h2>
+            <p id="overlay-copy">Dodge the falling debris.<br>Stay in the light.</p>
+            <button class="play-button" id="play-button" type="button"><span id="button-label">Begin flight</span><span aria-hidden="true">↗</span></button>
+          </div>
+        </div>
+        <div class="game-footline"><span>← → / A D TO STEER</span><span>TOUCH TO MOVE</span></div>
+      </div>
+    </section>
+    <footer class="footer"><span>KEEP YOUR EYES ON THE OPENING.</span><span>ENDLESS FLIGHT <span class="footer-star">✳</span></span></footer>
+  </main>
+</body>
+</html>
